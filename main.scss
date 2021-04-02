@@ -1,0 +1,147 @@
+// variables
+$card2: hsl(0, 78%, 62%);
+$card1: hsl(180, 62%, 55%);
+$card4: hsl(34, 97%, 64%);
+$card3: hsl(212, 86%, 64%);
+$heading: hsl(234, 12%, 34%);
+$para: hsl(229, 6%, 66%);
+$blur: hsl(0, 0%, 98%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+body {
+  font-size: 15px;
+  background-color: $blur;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  overflow: auto;
+  } 
+
+.container {
+  
+  margin: auto;
+  background-color: $blur;
+  justify-content: center;
+}
+
+
+// top section
+.hero {
+  width: 500px;
+  text-align: center;
+  margin: auto;
+  
+  &__minor-heading {
+    font-weight: 400;
+    color: $para;
+    padding-top: 2em;
+    font-size: 1.9em;
+  }
+
+  &__heading {
+    color: $heading;
+    padding-bottom: 0.5em;
+  }
+
+  &__blurb {
+    color: $para;
+    font-weight: 300;
+    padding-bottom: 2em;
+  }
+}
+
+// cards section using Grid
+
+.cards {
+  margin:auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: 
+    '. team .'
+    'super karma calc';
+  column-gap: 1.5em;
+  row-gap: 1.5em;
+  max-width: 900px; 
+  justify-content: center; 
+  margin-bottom: 2em;
+  
+  
+  
+
+  &__box {
+    background-color: white;
+    border-radius: 5px;
+    padding: 3% 5%;
+    box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    height: 200px;
+    line-height: 1.6em;
+    margin: auto;
+    
+  
+
+    &--supervisor {
+      border-top: 4px solid $card1;
+      grid-area: super;
+      top: -55%;
+      position: relative;
+    }
+    &--teambuilder {
+      border-top: 4px solid $card2;
+      grid-area: team;
+      margin-bottom: 1.2em;
+    }
+    &--karma {
+      border-top: 4px solid $card4;
+      grid-area: karma;
+    }
+    &--calculator {
+      border-top: 4px solid $card3;
+      grid-area: calc;
+      top: -55%;
+      position: relative;
+    }
+  }
+
+  &__heading {
+    color: $heading;
+    font-size: 1.2em;
+  }
+
+  &__para {
+    color: $para;
+    font-size: .8em;
+  }
+
+  &__image {
+    margin: 10px 10px 10px 170px;
+  }
+
+}
+
+
+//FEM bottom stuff
+.attribution {
+  font-size: 11px;
+  text-align: center;
+
+  & a {
+    color: hsl(228, 45%, 44%);
+  }
+}
+
+@media(max-width: 376px) {
+  .hero {
+    width: auto;
+    padding: 1em;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+  }
+}

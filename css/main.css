@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  background-color: #fafafa;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  overflow: auto;
+}
+
+.container {
+  margin: auto;
+  background-color: #fafafa;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hero {
+  width: 500px;
+  text-align: center;
+  margin: auto;
+}
+
+.hero__minor-heading {
+  font-weight: 400;
+  color: #a3a5ae;
+  padding-top: 2em;
+  font-size: 1.9em;
+}
+
+.hero__heading {
+  color: #4c4e61;
+  padding-bottom: 0.5em;
+}
+
+.hero__blurb {
+  color: #a3a5ae;
+  font-weight: 300;
+  padding-bottom: 2em;
+}
+
+.cards {
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: '. team .' 'super karma calc';
+  -webkit-column-gap: 1.5em;
+          column-gap: 1.5em;
+  row-gap: 1.5em;
+  max-width: 900px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 2em;
+}
+
+.cards__box {
+  background-color: white;
+  border-radius: 5px;
+  padding: 3% 5%;
+  -webkit-box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  height: 200px;
+  line-height: 1.6em;
+  margin: auto;
+}
+
+.cards__box--supervisor {
+  border-top: 4px solid #45d3d3;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: super;
+  top: -55%;
+  position: relative;
+}
+
+.cards__box--teambuilder {
+  border-top: 4px solid #ea5353;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: team;
+  margin-bottom: 1.2em;
+}
+
+.cards__box--karma {
+  border-top: 4px solid #fcaf4a;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: karma;
+}
+
+.cards__box--calculator {
+  border-top: 4px solid #549ef2;
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: calc;
+  top: -55%;
+  position: relative;
+}
+
+.cards__heading {
+  color: #4c4e61;
+  font-size: 1.2em;
+}
+
+.cards__para {
+  color: #a3a5ae;
+  font-size: .8em;
+}
+
+.cards__image {
+  margin: 10px 10px 10px 170px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+@media (max-width: 376px) {
+  .hero {
+    width: auto;
+    padding: 1em;
+  }
+  .cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/*# sourceMappingURL=main.css.map */
